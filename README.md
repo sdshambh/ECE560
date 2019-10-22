@@ -2,6 +2,7 @@
 Embedded System Design
 
 Project 1: μSD CARD READERS
+----------------------------
 
 Improving the responsiveness of system by giving control to the scheduler sooner and removing the busy wait loops.
 The base program uses the open source SD card interface code ulibSD (available on github) by Nelson Lombardo based on
@@ -21,6 +22,7 @@ The responsiveness improved from millisecond to some μsecond.
 
 
 Project 2: Sharing the ADC
+-----------------------------
 
 The ADC is shared between the buck converter controller and the touchscreen code, while still maintaining correct timing for the 
 buck converter controller.
