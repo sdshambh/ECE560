@@ -10,8 +10,8 @@ work by Chan. The program does the following:
 
 1. Initializes card controller
 2. Repeats these steps, starting with the first sector and then advancing.
--> Reads the next 100 sectors (blocks) of data (each 512 bytes long) from the μSD card.
-->Writes test data to the next sector and reads it back to verify correct operation.
+ i) Reads the next 100 sectors (blocks) of data (each 512 bytes long) from the μSD card.
+ ii) Writes test data to the next sector and reads it back to verify correct operation.
 3. Also does make‐work (approximating π) which represents other processing/threads in the program.
 
 The systems is improved by two startegies:
@@ -28,9 +28,9 @@ Project 2: Sharing the ADC
 The ADC is shared between the buck converter controller and the touchscreen code, while still maintaining correct timing for the 
 buck converter controller.
 On toughing the touchscreen either of the two things happens:
-If touched in upper portion of screen (above the Dim  Bright text), draw a white line between previous and
+1) If touched in upper portion of screen (above the Dim  Bright text), draw a white line between previous and
 current touch points.
- If touched in lower portion of screen (on or below the Dim  Bright text), set the peak current
+2) If touched in lower portion of screen (on or below the Dim  Bright text), set the peak current
 (g_peak_set_current) to between 1 and 120 mA, based on the X position of the touch.
 
 This functionality is achieved by using RTX5 RTOS and ADC is shared as a resource between the threads.
