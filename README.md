@@ -8,11 +8,11 @@ Improving the responsiveness of system by giving control to the scheduler sooner
 The base program uses the open source SD card interface code ulibSD (available on github) by Nelson Lombardo based on
 work by Chan. The program does the following:
 
-->Initializes card controller
-->Repeats these steps, starting with the first sector and then advancing.
-  ->Reads the next 100 sectors (blocks) of data (each 512 bytes long) from the μSD card.
-  ->Writes test data to the next sector and reads it back to verify correct operation.
-->Also does make‐work (approximating π) which represents other processing/threads in the program.
+1. Initializes card controller
+2. Repeats these steps, starting with the first sector and then advancing.
+3. Reads the next 100 sectors (blocks) of data (each 512 bytes long) from the μSD card.
+4. Writes test data to the next sector and reads it back to verify correct operation.
+5. Also does make‐work (approximating π) which represents other processing/threads in the program.
 
 The systems is improved by two startegies:
 1) By building a scheduler that takes over the control and schedules tasks in non-preemptive (non-prioritize tasks) way. Which improves
